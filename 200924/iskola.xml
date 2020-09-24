@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE iskola [
+<!ELEMENT iskola (tanar+, tantargy+)>
+
+<!ELEMENT tanar (nev, szak+)> 
+<!ATTLIST tanar kod ID #REQUIRED>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+
+<!ELEMENT tantargy (tnev, osztaly+)>
+<!ATTLIST tantargy kod ID #REQUIRED >
+<!ATTLIST tantargy oktato IDREF #IMPLIED>
+
+<!ELEMENT tnev (#PCDATA)>
+<!ELEMENT osztaly (#PCDATA)>
+]>
+
+
+<iskola>
+	<tanar kod="t1">
+		<nev> Vala Ki </nev>
+		<szak> IIT </szak>
+	</tanar>
+		<tanar kod="t2">
+		<nev> Sen Ki </nev>
+		<szak> AIT </szak>
+	</tanar>
+	<tantargy kod="targy1" oktato="t1">
+		<tnev> Webes prog </tnev>
+		<osztaly> BI1 </osztaly>
+		<osztaly> BI2 </osztaly>
+		<osztaly> BPI1 </osztaly>
+	</tantargy>
+	<tantargy kod="targy2" oktato="t1">
+		<tnev> Advanced BSing </tnev>
+		<osztaly> BI1 </osztaly>
+		<osztaly> BPI1 </osztaly>
+	</tantargy>
+
+ </iskola>

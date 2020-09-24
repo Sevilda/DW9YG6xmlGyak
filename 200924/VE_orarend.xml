@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orarend SYSTEM "VE_orarend.dtd">
+<?xml-stylesheet  type="text/xsl" href="VE_orarend.xsl"?>
+<!--<orarend xmlns:xsi="https://w3.org/2001/XMLSchema-instance">-->
+<orarend>
+	<ora id="ora_id_1" tipus="eloadas">
+		<targy> Szoftver teszteles</targy>
+		<idopont day="h">
+			 <nap> hetfo </nap> 
+			 <tol> 8 </tol>
+			 <ig> 12 </ig>
+		</idopont>
+        <helyszin> IIT 101 </helyszin>
+        <oktato> Tompa T. </oktato>
+		<szak> KWT </szak>	
+	</ora>
+	
+	<ora id="ora_id_2" tipus="gyakorlat">
+		<targy>Mesterseges Intelligenciak</targy> 
+            <idopont day="h">
+			 <nap> Hetfo </nap> 
+			 <tol> 12 </tol>
+			 <ig> 15 </ig>
+		</idopont>
+        <helyszin>A_305 </helyszin>
+        <oktato > Dudas L.</oktato>
+		<szak> KWT </szak>
+	</ora>	
+		
+	<ora id="ora_id_3" tipus="gyakorlat">
+        <targy> Web Technologiak </targy>
+			<idopont day="h">
+			 <nap> Hetfo </nap> 
+			 <tol> 15 </tol>
+			 <ig> 18 </ig>
+		</idopont>
+        <helyszin> IIT_103</helyszin>
+        <oktato>Agardi A. </oktato>
+		<szak> KWT </szak>	
+	</ora>
+	
+	<ora id="ora_id_4" tipus="gyakorlat">
+		<targy>Web Alk Javaban</targy>
+		<idopont day="k">
+			 <nap> Kedd </nap> 
+			 <tol> 12 </tol>
+			 <ig> 14 </ig>
+		</idopont>	
+        <helyszin >103</helyszin>
+        <oktato>Bednarik L.</oktato>
+		<szak> KWT </szak>	
+	</ora>
+	
+	<ora id="ora_id_5" tipus="eloadas">
+		<targy>Adatkezeles XML ben </targy>
+		<idopont day="k">
+			 <nap> Kedd </nap> 
+			 <tol> 12 </tol>
+			 <ig> 14 </ig>
+		</idopont>	
+		<helyszin> 305</helyszin>
+		<oktato> Bednarik L.</oktato>
+		<szak> KWT </szak>	
+	</ora>
+	
+	<ora id="ora_id_6" tipus="eloadas">
+        <targy>Integralt Vallalati Rdsz.-ek</targy>
+		<idopont day="s">
+			 <nap> Szerda </nap> 
+			 <tol> 12 </tol>
+			 <ig> 16 </ig>
+		</idopont>
+		<helyszin>A_319</helyszin>
+        <oktato> Samad D.</oktato>
+		<szak> KWT </szak>	
+	</ora>
+</orarend>

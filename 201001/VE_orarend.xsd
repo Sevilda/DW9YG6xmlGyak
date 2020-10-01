@@ -1,12 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name="orarend">
-  <xs:complexType>
-    <xs:sequence>
+	<xs:element name="orarend">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="ora" maxOccurs="unbounded" type="oratipus"/>
+		</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+				
+				
+	<xs:complexType name="oratipus">
+		<xs:sequence>
+			<xs:element name="targy" type="xs:string"/>	
+			<xs:element name="idopont" maxOccurs="unbounded" type="idoponttipus"/>
+			<xs:element name="helyszin" maxOccurs="unbounded" type="xs:string" />
+			<xs:element name="oktato" type="xs:string"/>
+			<xs:element name="szak" type="xs:string"/>	
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+		<xs:attribute name="tipus" type="oratipusTipus" default="eloadas"/>
+	</xs:complexType>
+	
+	<xs:complexType name="idoponttipus">				
+		<xs:sequence>
+			<xs:element name="nap" />
+			<xs:element name="tol" type="idopontoraTipus" />
+			<xs:element name="ig" type="idopontoraTipus" />
+		</xs:sequence>
+		<xs:attribute name="day">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="h|k|s|c" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:simpleType name="oratipusTipus">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="gyakorlat|eloadas" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="idopontoraTipus">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="8" />
+			<xs:maxInclusive value="19" />
+		</xs:restriction>	
+	</xs:simpleType>
 
-    </xs:sequence>
-  </xs:complexType>
-</xs:element> 
 
-</xs:schema>
+
+	
+	</xs:schema>

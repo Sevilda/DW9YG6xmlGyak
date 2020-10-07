@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="mozi">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="film" maxOccurs="unbounded" type="movieType"/>
+		</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="movieType">
+		<xs:sequence>
+			<xs:element name="rendezo" type="rendezoType"/>
+			<xs:element name="szinesz" type="szineszType"/>
+			<xs:element name="iro" type="iroType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="rendezoType">
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="nev" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="szineszType">
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="nev" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="iroType">
+			<xs:attribute name="id" type="xs:int" use="required"/>
+	</xs:complexType>
+	
+	
+	</xs:schema>
+	

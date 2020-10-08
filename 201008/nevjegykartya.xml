@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<nevjegykartyak
+	xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="nevjegykartya.xsd">
+	<nevjegykartya id="1">
+		<nev> Abc </nev>
+		<ceg>
+			<cim>
+				<iranyitoszam>0000</iranyitoszam>
+				<varos>Bp</varos>
+				<utca>Kis</utca>
+				<hazszam>1</hazszam>
+			</cim>
+			<nev> Knowing what you think Inc.  </nev>
+			<telefonszam korzet="01"/>
+			<weblap> kwy.com </weblap>
+		</ceg>
+		
+		<beosztas>Senior Developer</beosztas>
+		<telefonszam korzet="01"/>
+		<email>abc@kwy.com</email>
+	</nevjegykartya>
+</nevjegykartyak>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ER xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ERkonvSchema.xsd">
+
+	<A a="aID">
+		<!-- b is a multivalued -->
+		<b>
+			<x> Content </x>
+			<y> Content </y>
+		</b>
+		<b>
+			<x> Content </x>
+			<y> Content </y>
+		</b>
+		<c> Unnamed composites</c>
+	</A>
+
+	<B a="bID">
+		<b>
+			<x> Content </x>
+			<y> Content </y>
+		</b>
+	</B>
+
+	<C a="cID">
+		<b />
+		<!-- Afaik C to B relation is detailed in here as it is the '1' side of 
+			the relation. !! will ask about it later -->
+		<bID />
+	</C>
+
+
+	<AtoB aID="" bID="">
+		<c> Content </c>
+	</AtoB>
+
+</ER>

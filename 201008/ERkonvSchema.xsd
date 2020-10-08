@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="ER">
+	<xs:complexType>
+		<xs:all>
+			<xs:element name="A" type="aType"/>
+			<xs:element name="B" type="bType"/>
+			<xs:element name="C" type="cType"/>
+			<xs:element name="AtoB" type="atoBType"/>
+		</xs:all>
+	</xs:complexType>
+</xs:element>
+
+<xs:complexType name="aType">
+	<xs:all>
+		<xs:element name="b" type="a_bType"/>
+		<xs:element name="c"/>
+	</xs:all>
+	<xs:attribute name="a" />
+		<!-- id -->
+</xs:complexType>
+
+</xs:schema>

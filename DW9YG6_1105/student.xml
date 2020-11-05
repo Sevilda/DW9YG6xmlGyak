@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class xmlns:xsi="https://w3.org/2001/XMLSchema-instance">
+	<student rollno="393">
+		<firstname>Alexandra</firstname>
+		<lastname>Fekete</lastname>
+		<nickname>alefek</nickname>
+		<age>20</age>
+	</student>
+</class>

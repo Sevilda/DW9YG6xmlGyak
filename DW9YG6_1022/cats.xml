@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<!DOCTYPE note SYSTEM "cats.dtd">-->
+<!--<!DOCTYPE cats SYSTEM "cats.dtd">-->
 <cats xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="cats.xsd">>
 <cat id="1">

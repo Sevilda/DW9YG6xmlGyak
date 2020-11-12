@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class xmlns:xsi="https://w3.org/2001/XMLSchema-instance">
+<student rollno="393" >
+		<firstname>Eniko</firstname>
+		<lastname>Vadon</lastname>
+		<nickname>nc</nickname>
+		<marks>85</marks>
+</student>
+
+<student rollno="493" >
+		<firstname>Dora</firstname>
+		<lastname>Kek</lastname>
+		<nickname>dorka</nickname>
+		<marks>95</marks>
+</student>
+
+<student rollno="593" >
+		<firstname>Andrea</firstname>
+		<lastname>Zsoldos</lastname>
+		<nickname>andi</nickname>
+		<marks>90</marks>
+</student>
+</class>

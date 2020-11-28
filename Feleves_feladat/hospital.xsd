@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="location" type="xs:string" />
+	<xs:element name="name" type="xs:string" />
+	<xs:element name="firstname" type="xs:string" />
+	<xs:element name="lastname" type="xs:string" />
+	<xs:element name="birthdate" type="xs:string" />
+	<xs:element name="allergy" type="xs:string" />
+	<xs:element name="price" type="xs:short" />
+	<xs:element name="quantity" type="xs:short" />
+	<xs:element name="condition" type="xs:string" />
+	<xs:element name="admission-date" type="xs:date" />
+	<xs:element name="specializing" type="xs:string" />
+	
+	<xs:element name="employed" type="xs:IDREF" />
+	<xs:element name="patient-id" type="xs:IDREF" />
+	<xs:element name="ward-id" type="xs:IDREF" />
+	<xs:element name="medicine-id" type="xs:IDREF" />
+
+
+	<xs:element name="hospital">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ward" maxOccurs="unbounded" />
+				<xs:element ref="patient" maxOccurs="unbounded" />
+				<xs:element ref="doctor" maxOccurs="unbounded" />
+				<xs:element ref="medicine" maxOccurs="unbounded" />
+				<xs:element ref="treatment" maxOccurs="unbounded" />
+				<xs:element ref="prescription" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ward">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="location" />
+			</xs:sequence>
+			<xs:attribute type="xs:ID" name="id" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="patient">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="fullname" />
+				<xs:element ref="birthdate" />
+				<xs:element ref="allergy" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute type="xs:ID" name="id" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="fullname">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="firstname" minOccurs="1" />
+				<xs:element ref="lastname" minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+
+	<xs:element name="doctor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fullname" />
+				<xs:element ref="birthdate" />
+				<xs:element ref="specializing" minOccurs="0" />
+				<xs:element ref="employed" />
+			</xs:sequence>
+			<xs:attribute type="xs:ID" name="id" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="medicine">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="price" />
+			</xs:sequence>
+			<xs:attribute type="xs:ID" name="id" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="treatment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="patient-id" />
+				<xs:element ref="ward-id" />
+				<xs:element ref="condition" minOccurs="0" />
+				<xs:element ref="admission-date" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="prescription">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="patient-id" />
+				<xs:element ref="medicine-id" />
+				<xs:element ref="quantity" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

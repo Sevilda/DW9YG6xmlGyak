@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><hospital xmlns:xsi="https://w3.org/2001/XMLSchema-instance">
+
+	<ward id="wardccu">
+		<name>CCU</name>
+		<location>North Wing</location>
+	</ward>
+	<ward id="wardrehab">
+		<name>Rehabilitation</name>
+		<location>Southwest Wing</location>
+	</ward>
+	
+	<patient id="pat23">
+		<fullname>
+			<firstname>John</firstname>
+			<lastname>Wick</lastname>
+		</fullname>
+		<birthdate>1993-03-02</birthdate>
+		<allergy>Lactose</allergy>
+		<allergy>penicillin</allergy>
+	</patient>
+	<patient id="pat69">
+		<fullname>
+			<firstname>Mike</firstname>
+			<lastname>Ritch</lastname>
+		</fullname>
+		<birthdate>1978-06-30</birthdate>
+		<allergy>Gluten</allergy>
+	</patient>
+	
+	<doctor id="doc6">
+		<fullname>
+			<firstname>Charles</firstname>
+			<lastname>Schultz</lastname>
+		</fullname>
+		<birthdate>1965-11-11</birthdate>
+		<specializing>Pediatrics</specializing>
+		<employed>wardccu</employed>
+	</doctor>
+	<doctor id="doc21">
+		<fullname>
+			<firstname>Celestina</firstname>
+			<lastname>Warbeck</lastname>
+		</fullname>
+		<birthdate>1970.01.01</birthdate>
+		<employed>wardccu</employed>
+	</doctor>
+	
+	<medicine id="medpain1">
+		<name>Aspirin</name>
+		<price>16500</price>	
+	</medicine>
+	<medicine id="medlax5">
+		<name>Ducolax</name>
+		<price>300</price>	
+	</medicine>
+	<medicine id="medanx4">
+		<name>Xanax</name>
+		<price>666</price>	
+	</medicine>
+	
+	<treatment>
+		<patient-id>pat23</patient-id>
+		<ward-id>wardccu</ward-id>
+		<condition>arrhythmia</condition>
+		<admission-date>2020-06-08</admission-date>
+	</treatment>
+	<treatment>
+		<patient-id>pat92</patient-id>
+		<ward-id>wardrehab</ward-id>
+		<admission-date>2020-10-13</admission-date>
+	</treatment>
+	
+	<prescription>
+		<patient-id>pat92</patient-id>
+		<medicine-id>medlax5</medicine-id>
+		<quantity>30</quantity>
+	</prescription>
+	<prescription>
+		<patient-id>pat92</patient-id>
+		<medicine-id>medanx4</medicine-id>
+		<quantity>20</quantity>
+	</prescription>
+	<prescription>
+		<patient-id>pat23</patient-id>
+		<medicine-id>medanx4</medicine-id>
+		<quantity>60</quantity>
+	</prescription>
+	
+	
+
+</hospital>

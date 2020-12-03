@@ -27,7 +27,7 @@ public class DOMDataReader {
 
 			// readWards(rootElement);
 			// readDoctors(rootElement);
-			readPatients(rootElement);
+			// readPatients(rootElement);
 			// readMedicines(rootElement);
 			// readTreatments(rootElement);
 

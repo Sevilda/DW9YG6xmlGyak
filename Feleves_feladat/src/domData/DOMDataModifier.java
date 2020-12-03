@@ -20,7 +20,7 @@ public class DOMDataModifier {
 	public static void main(String[] args) {
 
 		try {
-			File inputFile = new File("text.xml");
+			File inputFile = new File("hospital.xml");
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 			Document doc = docBuilder.parse(inputFile);

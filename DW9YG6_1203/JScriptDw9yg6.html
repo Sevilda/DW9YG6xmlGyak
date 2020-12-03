@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery.min.js"></script>
+
+<script>
+				$(function() {
+			$.getJSON('XMLDw9yg6.json', function(data) {
+				$.each(data.book, function(i, books){
+					$('body').append ("<br>Author: " + books.author + "<br>Language: " + books.language)
+					});
+				});
+			});
+	</script>
+</head>
+<body>
+	<h1>JSON megvalositasa, JavaScript</h1>
+
+
+
+</body>
+
+
+</html>

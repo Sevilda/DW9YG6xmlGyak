@@ -63,8 +63,6 @@
 		</xs:complexType>
 	</xs:element>
 
-
-
 	<xs:element name="doctor">
 		<xs:complexType>
 			<xs:sequence>

@@ -25,19 +25,29 @@ public class DOMDataReader {
 
 			System.out.println(rootElement.getNodeName());
 
-			// readWards(rootElement);
-			// readDoctors(rootElement);
-			// readPatients(rootElement);
-			// readMedicines(rootElement);
-			// readTreatments(rootElement);
+//			 readWards(rootElement);
+//			 readDoctors(rootElement);
+//			 readPatients(rootElement);
+//			 readMedicines(rootElement);
+//			 readTreatments(rootElement);
+			readDocument(rootElement);
 
 		} catch (Exception E) {
 			E.printStackTrace();
 		}
 
 	}
-
+	
+	public static void readDocument (Element rootElement) {
+		readWards(rootElement);
+		readDoctors(rootElement);
+		readPatients(rootElement);
+		readMedicines(rootElement);
+		readTreatments(rootElement);
+	}
+	
 	public static void readWards(Element rootElement) {
+		System.out.println("\nWards: ");
 		try {
 			NodeList nodeList = rootElement.getElementsByTagName("ward");
 
@@ -62,6 +72,7 @@ public class DOMDataReader {
 	}
 
 	public static void readDoctors(Element rootElement) {
+		System.out.println("\nDoctors: ");
 		try {
 			NodeList nodeList = rootElement.getElementsByTagName("doctor");
 
@@ -110,6 +121,7 @@ public class DOMDataReader {
 	}
 
 	public static void readPatients(Element rootElement) {
+		System.out.println("\nPatients");
 		try {
 			NodeList nodeList = rootElement.getElementsByTagName("patient");
 
@@ -147,6 +159,7 @@ public class DOMDataReader {
 	}
 
 	public static void readMedicines(Element rootElement) {
+		System.out.println("\nMedicines: ");
 		try {
 			NodeList nodeList = rootElement.getElementsByTagName("medicine");
 
@@ -172,43 +185,47 @@ public class DOMDataReader {
 	}
 
 	public static void readTreatments(Element rootElement) {
+		System.out.println("\nTreatments: ");
+		try {
+			NodeList nodeList = rootElement.getElementsByTagName("treatment");
 
-		NodeList nodeList = rootElement.getElementsByTagName("treatment");
-
-		for (int i = 0; i < nodeList.getLength(); i++) {
-			Node currentNode = nodeList.item(i);
-			if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
-				Element currentElement = (Element) currentNode;
-				
-				//patient
-				String patient = currentElement.getElementsByTagName("patient-id").item(0).getTextContent();
-				NodeList patientNodes = rootElement.getElementsByTagName("patient");
-				for (int j = 0; j < patientNodes.getLength(); j++) {
-					Node currentPatientNode = patientNodes.item(j);
-					if (currentPatientNode.getNodeType() == Node.ELEMENT_NODE) {
-						Element currentPatientElement = (Element) currentPatientNode;
-						if (currentPatientElement.getAttribute("id").compareToIgnoreCase(patient) == 0) {
-							String patientName = currentPatientElement.getElementsByTagName("fullname").item(0).getTextContent();
-							System.out.println("\tPatient: " + patientName);
+			for (int i = 0; i < nodeList.getLength(); i++) {
+				Node currentNode = nodeList.item(i);
+				if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
+					Element currentElement = (Element) currentNode;
+					
+					//patient
+					String patient = currentElement.getElementsByTagName("patient-id").item(0).getTextContent();
+					NodeList patientNodes = rootElement.getElementsByTagName("patient");
+					for (int j = 0; j < patientNodes.getLength(); j++) {
+						Node currentPatientNode = patientNodes.item(j);
+						if (currentPatientNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element currentPatientElement = (Element) currentPatientNode;
+							if (currentPatientElement.getAttribute("id").compareToIgnoreCase(patient) == 0) {
+								String patientName = currentPatientElement.getElementsByTagName("fullname").item(0).getTextContent();
+								System.out.println("\tPatient: " + patientName);
+							}
 						}
 					}
-				}
-				
-				// id ref
-				String ward = currentElement.getElementsByTagName("ward-id").item(0).getTextContent();
-				NodeList wardNodes = rootElement.getElementsByTagName("ward");
-				for (int j = 0; j < nodeList.getLength(); j++) {
-					Node currentWardNode = wardNodes.item(j);
-					if (currentWardNode.getNodeType() == Node.ELEMENT_NODE) {
-						Element currentWardElement = (Element) currentWardNode;
-						if (currentWardElement.getAttribute("id").compareToIgnoreCase(ward) == 0) {
-							String wardName = currentWardElement.getElementsByTagName("name").item(0)
-									.getTextContent();
-							System.out.println("\tTreated at: " + wardName);
+					
+					// id ref
+					String ward = currentElement.getElementsByTagName("ward-id").item(0).getTextContent();
+					NodeList wardNodes = rootElement.getElementsByTagName("ward");
+					for (int j = 0; j < nodeList.getLength(); j++) {
+						Node currentWardNode = wardNodes.item(j);
+						if (currentWardNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element currentWardElement = (Element) currentWardNode;
+							if (currentWardElement.getAttribute("id").compareToIgnoreCase(ward) == 0) {
+								String wardName = currentWardElement.getElementsByTagName("name").item(0)
+										.getTextContent();
+								System.out.println("\tTreated at: " + wardName);
+							}
 						}
 					}
 				}
 			}
+		} catch (DOMException e) {
+			e.printStackTrace();
 		}
 	}
 }

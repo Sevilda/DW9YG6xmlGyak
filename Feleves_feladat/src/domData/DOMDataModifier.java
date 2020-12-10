@@ -24,15 +24,16 @@ public class DOMDataModifier {
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 			Document doc = docBuilder.parse(inputFile);
+			
 			Element rootElement = doc.getDocumentElement();
 
-			String oldPatientID = "pat69", newPatientID = "pat11";
+			String oldPatientID = "pat23", newPatientID = "pat11";
 			modifyPatientID(rootElement, oldPatientID, newPatientID);
 			String medicineName = "Aspirin";
 			int newPrice = 1662;
 			updateMedicinePrice(rootElement, medicineName, newPrice);
 
-			// write the content on console
+			// write the content on back into the file
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
 			DOMSource source = new DOMSource(doc);
@@ -54,6 +55,7 @@ public class DOMDataModifier {
 				if (oldPatientID.equalsIgnoreCase(nodeAttr.getTextContent())) {
 					nodeAttr.setTextContent(newPatientID);
 					System.out.println("Modified patient with id " + oldPatientID + ".");
+					break;
 				}
 			}
 		} catch (DOMException e) {
@@ -75,7 +77,6 @@ public class DOMDataModifier {
 //						System.out.println(medElement.getElementsByTagName("price").item(0).getTextContent());
 					medElement.getElementsByTagName("price").item(0).setTextContent(String.valueOf(newPrice));
 					System.out.println("Modified price of " + medicineName + " to " + newPrice);
-
 					break;
 				}
 			}

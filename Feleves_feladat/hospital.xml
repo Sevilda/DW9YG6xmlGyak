@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hospital xmlns:xsi="https://w3.org/2001/XMLSchema-instance">
+<hospital xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="hospital.xsd">
 
 	<ward id="wardccu">
 		<name>CCU</name>
@@ -86,7 +87,6 @@
 		<medicine-id>medanx4</medicine-id>
 		<quantity>60</quantity>
 	</prescription>
-	
 	
 
 </hospital>

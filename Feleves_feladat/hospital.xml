@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<hospital xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="hospital.xsd">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><hospital xmlns:xsi="https://w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hospital.xsd">
 
 	<ward id="wardccu">
 		<name>CCU</name>
@@ -11,7 +9,7 @@ xsi:noNamespaceSchemaLocation="hospital.xsd">
 		<location>Southwest Wing</location>
 	</ward>
 	
-	<patient id="pat23">
+	<patient id="pat11">
 		<fullname>
 			<firstname>John</firstname>
 			<lastname>Wick</lastname>
@@ -49,7 +47,7 @@ xsi:noNamespaceSchemaLocation="hospital.xsd">
 	
 	<medicine id="medpain1">
 		<name>Aspirin</name>
-		<price>2000</price>	
+		<price>666</price>	
 	</medicine>
 	<medicine id="medlax5">
 		<name>Ducolax</name>

@@ -30,7 +30,7 @@ public class DOMDataModifier {
 			String oldPatientID = "pat23", newPatientID = "pat11";
 			modifyPatientID(rootElement, oldPatientID, newPatientID);
 			String medicineName = "Aspirin";
-			int newPrice = 1662;
+			int newPrice = 666;
 			updateMedicinePrice(rootElement, medicineName, newPrice);
 
 			// write the content on back into the file

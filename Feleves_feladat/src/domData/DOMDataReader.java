@@ -15,12 +15,21 @@ public class DOMDataReader {
 
 	public static void main(String[] args) {
 		try {
+			//Initialize a DocumentBuilderFactory
+			//Dokumentumolvaso letrehozasa
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+			//Read the XML file
+			//XML Dokumentum beolvasasa
 			File file = new File("hospital.xml");
+			//Parse the document into readable format
+			//A letezo dokumentum feldolgozasa a dokumentumolvasoval
 			Document doc = documentBuilder.parse(file);
-
+			//Normalize
+			//Dokumentum normalizalasa
 			doc.getDocumentElement().normalize();
+			//Get the rootelement
+			//Gyokerelem elerese
 			Element rootElement = doc.getDocumentElement();
 
 			System.out.println(rootElement.getNodeName());
